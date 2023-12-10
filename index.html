@@ -4,10 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pizza Parlor</title>
 </head>
 
 <body>
+  <h1>Kirsten's Pizza Parlor</h1>
+  <p>Welcome to Kirsten's Pizza Parlor!Create your customized pizza here.</p>
+  <form>
+    <p>Choose your size:</p>
+    <label for="small-size">Small</label>
+    <input type="radio" name="small-size" id="small-size">
+    <label for="medium-size">Medium</label>
+    <input type="radio" name="medium-size" id="medium-size">
+    <label for="large-size">Large</label>
+    <input type="radio" name="large-size" id="large-size">
+
+    <p>Choose your toppings:</p>
+    <label for="cheese">Cheese</label>
+    <input type="radio" name="cheese" id="cheese">
+    <label for="pepperoni">Pepperoni</label>
+    <input type="radio" name="pepperoni" id="pepperoni">
+    <label for="olives">Olives</label>
+    <input type="radio" name="olives" id="olives">
+    <label for="peppers">Peppers</label>
+    <input type="radio" name="peppers" id="peppers">
+    <label for="onions">Onions</label>
+    <input type="radio" name="onions" id="onions">
+    <label for="mushrooms">Mushrooms</label>
+    <input type="radio" name="mushrooms" id="mushrooms">
+  </form>
+
+  <div>
+    <h2>Your pizza:</h2>
+    <p><span id="complete-pizza"></span></p>
+  </div>
 
 </body>
 
