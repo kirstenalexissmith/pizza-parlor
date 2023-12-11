@@ -9,34 +9,36 @@
 
 <body>
   <h1>Kirsten's Pizza Parlor</h1>
-  <p>Welcome to Kirsten's Pizza Parlor!Create your customized pizza here.</p>
+  <p>Welcome to Kirsten's Pizza Parlor! Create your customized pizza here.</p>
   <form>
     <p>Choose your size:</p>
-    <label for="small-size">Small</label>
-    <input type="radio" name="small-size" id="small-size">
-    <label for="medium-size">Medium</label>
-    <input type="radio" name="medium-size" id="medium-size">
-    <label for="large-size">Large</label>
-    <input type="radio" name="large-size" id="large-size">
+    <label for="small">Small</label>
+    <input type="radio" name="size" id="small" value="small">
+    <label for="medium">Medium</label>
+    <input type="radio" name="size" id="medium" value="medium">
+    <label for="large">Large</label>
+    <input type="radio" name="size" id="large" value="large">
 
     <p>Choose your toppings:</p>
-    <label for="cheese">Cheese</label>
-    <input type="radio" name="cheese" id="cheese">
-    <label for="pepperoni">Pepperoni</label>
-    <input type="radio" name="pepperoni" id="pepperoni">
-    <label for="olives">Olives</label>
-    <input type="radio" name="olives" id="olives">
-    <label for="peppers">Peppers</label>
-    <input type="radio" name="peppers" id="peppers">
-    <label for="onions">Onions</label>
-    <input type="radio" name="onions" id="onions">
-    <label for="mushrooms">Mushrooms</label>
-    <input type="radio" name="mushrooms" id="mushrooms">
+    <input type="checkbox" id="cheese" name="topping" value="cheese">
+    <label for="cheese"> Cheese</label><br>
+    <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+    <label for="pepperoni"> Pepperoni</label><br>
+    <input type="checkbox" id="onions" name="topping" value="onions">
+    <label for="onions"> Onions</label><br>
+    <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+    <label for="mushrooms"> Mushrooms</label><br>
+
   </form>
 
   <div>
     <h2>Your pizza:</h2>
     <p><span id="complete-pizza"></span></p>
+  </div>
+
+  <div id="cost">
+    <h2>Your total cost:</h2>
+    <p><span id="pizza-cost"></span></p>
   </div>
 
 </body>
