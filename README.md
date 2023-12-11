@@ -50,7 +50,7 @@ Expected Output: 17.90
 ```
 ## Known Bugs
 
-* Does not reset, clear data. User has to refresh page to start a new pizza.
+* Does not display anything if no size selected
 
 
 ## License

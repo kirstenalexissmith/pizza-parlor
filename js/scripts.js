@@ -25,7 +25,11 @@ function pizzaFormHandler(e) {
   document.getElementById("pizza-cost").textContent = `$${cost}`
 }
 
-
 window.addEventListener("load", function () {
   document.querySelector("#form").addEventListener("submit", pizzaFormHandler)
+
+  const refresh = document.getElementById("refresh");
+  refresh.addEventListener("click", function () {
+    location.reload();
+  })
 })
