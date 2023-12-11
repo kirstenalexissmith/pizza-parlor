@@ -56,4 +56,4 @@ Expected Output: 17.90
 ## License
 
 _[MIT](LICENSE.txt)_
-_Copyright (c) _2023_ _Kirsten Smith_## Tests
+_Copyright (c) _2023_ _Kirsten Smith_
