@@ -11,7 +11,7 @@
 <body>
   <h1>Kirsten's Pizza Parlor</h1>
   <p>Welcome to Kirsten's Pizza Parlor! Create your customized pizza here.</p>
-  <form>
+  <form id="form">
     <p>Choose your size:</p>
     <label for="small">Small</label>
     <input type="radio" name="size" id="small" value="small">
@@ -30,13 +30,8 @@
     <label for="onions"> Onions</label><br>
     <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
     <label for="mushrooms"> Mushrooms</label><br>
-    <button id="pizza-submit" type="submit">Submit Toppings</button>
+    <button id="pizza-submit" type="submit">Submit Pizza</button>
   </form>
-
-  <div>
-    <h2>Your pizza:</h2>
-    <p><span id="complete-pizza"></span></p>
-  </div>
 
   <div id="cost">
     <h2>Your total cost:</h2>

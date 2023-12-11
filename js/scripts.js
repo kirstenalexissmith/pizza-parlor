@@ -18,11 +18,11 @@ Pizza.prototype.getPizzaCost = function () {
 function pizzaFormHandler(e) {
   e.preventDefault();
   const selectedToppings = Array.from(document.querySelectorAll('input[name="topping"]:checked')).map(checkbox => checkbox.value);
-  const selectedSize = document.querySelector('input[name="size"]:checked');
+  const selectedSize = document.querySelector('input[name="size"]:checked').value;
 
-  const pizzaOrder = new Pizza(selectedToppings, selectedSize.value)
-  const cost = pizzaOrder.pizzaFormHandler();
-  document.getElementById("pizza-cost").textContent = `Total Cost: $${cost}`
+  const pizzaOrder = new Pizza(selectedSize, selectedToppings)
+  const cost = pizzaOrder.getPizzaCost();
+  document.getElementById("pizza-cost").textContent = `$${cost}`
 }
 
 
