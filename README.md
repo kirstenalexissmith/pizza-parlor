@@ -50,7 +50,7 @@ Expected Output: 17.90
 ```
 ## Known Bugs
 
-* Does not display anything if no size selected
+* No known bugs
 
 
 ## License

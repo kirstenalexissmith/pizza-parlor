@@ -11,6 +11,7 @@ Pizza.prototype.getPizzaCost = function () {
   const sizeCost = this.size === "small" ? 0 : this.size === "medium" ? 2 : 4;
 
   let totalCost = baseCost + toppingCost + sizeCost;
+
   return totalCost.toFixed(2);
 };
 //UI Logic
@@ -18,11 +19,14 @@ Pizza.prototype.getPizzaCost = function () {
 function pizzaFormHandler(e) {
   e.preventDefault();
   const selectedToppings = Array.from(document.querySelectorAll('input[name="topping"]:checked')).map(checkbox => checkbox.value);
-  const selectedSize = document.querySelector('input[name="size"]:checked').value;
-
+  const selectedSize = document.querySelector('input[name="size"]:checked');
   const pizzaOrder = new Pizza(selectedSize, selectedToppings)
   const cost = pizzaOrder.getPizzaCost();
-  document.getElementById("pizza-cost").textContent = `$${cost}`
+  if (selectedSize === null) {
+    document.getElementById('error-message').innerText = 'Please select a size option!';
+  } else {
+    document.getElementById("pizza-cost").textContent = `$${cost}`
+  }
 }
 
 window.addEventListener("load", function () {
