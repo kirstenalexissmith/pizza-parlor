@@ -18,16 +18,25 @@ Pizza.prototype.getPizzaCost = function () {
 
 function pizzaFormHandler(e) {
   e.preventDefault();
+
   const selectedToppings = Array.from(document.querySelectorAll('input[name="topping"]:checked')).map(checkbox => checkbox.value);
   const selectedSize = document.querySelector('input[name="size"]:checked');
-  const pizzaOrder = new Pizza(selectedSize, selectedToppings)
-  const cost = pizzaOrder.getPizzaCost();
-  if (selectedSize === null) {
-    document.getElementById('error-message').innerText = 'Please select a size option!';
-  } else {
-    document.getElementById("pizza-cost").textContent = `$${cost}`
+
+  if (!selectedSize) {
+    document.getElementById("error-message").textContent = "Please choose a pizza size.";
+    return;
   }
+
+  const pizzaOrder = new Pizza(selectedSize.value, selectedToppings)
+  const cost = pizzaOrder.getPizzaCost();
+
+  document.getElementById("error-message").textContent = "";
+  document.getElementById("pizza-cost").textContent = `$${cost}`;
+
+
 }
+
+
 
 window.addEventListener("load", function () {
   document.querySelector("#form").addEventListener("submit", pizzaFormHandler)
