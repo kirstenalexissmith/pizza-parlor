@@ -1,5 +1,4 @@
 //Business Logic
-
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
@@ -11,38 +10,27 @@ Pizza.prototype.getPizzaCost = function () {
   const sizeCost = this.size === "small" ? 0 : this.size === "medium" ? 2 : 4;
 
   let totalCost = baseCost + toppingCost + sizeCost;
-
   return totalCost.toFixed(2);
 };
-//UI Logic
 
+//UI Logic
 function pizzaFormHandler(e) {
   e.preventDefault();
-
   const selectedToppings = Array.from(document.querySelectorAll('input[name="topping"]:checked')).map(checkbox => checkbox.value);
   const selectedSize = document.querySelector('input[name="size"]:checked');
-
-  if (!selectedSize) {
-    document.getElementById("error-message").textContent = "Please choose a pizza size.";
-    return;
-  }
-
   const pizzaOrder = new Pizza(selectedSize.value, selectedToppings)
   const cost = pizzaOrder.getPizzaCost();
 
-  document.getElementById("error-message").textContent = "";
   document.getElementById("pizza-cost").textContent = `$${cost}`;
-
-
-}
+};
 
 
 
 window.addEventListener("load", function () {
-  document.querySelector("#form").addEventListener("submit", pizzaFormHandler)
+  document.querySelector("#form").addEventListener("submit", pizzaFormHandler);
 
   const refresh = document.getElementById("refresh");
   refresh.addEventListener("click", function () {
     location.reload();
-  })
-})
+  });
+});
