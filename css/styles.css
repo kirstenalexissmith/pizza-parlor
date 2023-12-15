@@ -66,9 +66,3 @@ button:hover {
   font-weight: bold;
   color: #e44d26;
 }
-
-#error-message {
-  display: none;
-  color: red;
-  font-weight: bolder;
-}
